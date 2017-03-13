@@ -2,7 +2,9 @@
 # Inform with xMatters for the ServiceNow integration
 The [xMatters integration for ServiceNow](https://store.servicenow.com/sn_appstore_store.do#!/store/application/5950d7444f2231000e9fa88ca310c78c) provides a several find and assign workflows for tracking down responsible parties for an Incident. However, there are cases where the need for informing other people about an Incident or providing updates regarding an Incident are important. This is where Inform with xMatters comes in. It does not target any users and instead relies on [subscriptions](http://help.xmatters.com/OnDemand/user/subscriptions.htm) to determine who wants to be notified. 
 
-<img style="border:5px solid #000000;" src="images/inform_page.png" alt="Inform with xMatters" height="400">
+<kbd>
+  <img src="images/inform_page.png" alt="Inform with xMatters" height="400">
+</kbd>
 
 
 # Pre-Requisites
@@ -22,7 +24,9 @@ Login to xMatters and import the [ServiceNow36withInform.zip](ServiceNow36withIn
 ## Configure ServiceNow
 Login to ServiceNow and expand the "Integration - xMatters" menu item. In the Configuration section, there is a new entry for "Inform Configuration":
 
-<img style="border:5px solid #000000;" src="images/inform_config.png" alt="Configuration Page for Inform with xMatters">
+<kbd>
+  <img src="images/inform_config.png" alt="Configuration Page for Inform with xMatters">
+</kbd>
 
 | Item | Description |
 | ----- | ----- |
@@ -34,7 +38,9 @@ Login to ServiceNow and expand the "Integration - xMatters" menu item. In the Co
 
 The Available Services and Available Locations values in the config page above will need to match what is available in the "affected_services" and "affected_locations" properties in the comm plan. Here:
 
-<img style="border:5px solid #000000;" src="images/affected_loc.png" alt="Affected Locations property in xMatters" >
+<kbd>
+  <img src="images/affected_loc.png" alt="Affected Locations property in xMatters" >
+</kbd>
 
 
 ## Configure xMatters
@@ -42,9 +48,13 @@ Make sure the `affected_locations` and the `affected_services` properties have b
 
 Create a subscription panel called Inform with xMatters and set the scope to only Inform with xMatters:
 
-<img style="border:5px solid #000000;" src="images/subpanel1.png">
+<kbd>
+  <img src="images/subpanel1.png">
+</kbd>
 
-<img style="border:5px solid #000000;" src="images/subpanel2.png">
+<kbd>
+  <img src="images/subpanel2.png">
+</kbd>
 
 Then create the actual subscription records for the users who wish to be notified. 
 
@@ -52,15 +62,21 @@ Then create the actual subscription records for the users who wish to be notifie
 # Testing
 Login to ServiceNow and find an open Incident. There will be a new button called "Inform with xMatters". Push it and the Inform dialog will be displayed:
 
-<img style="border:5px solid #000000;" src="images/inform_page.png">
+<kbd>
+  <img src="images/inform_page.png">
+</kbd>
 
 Populate all the relevant info and hit Submit. A helpful message will let you know you've done it successfully. 
 
-<img style="border:5px solid #000000;" src="images/success.png">
+<kbd>
+  <img src="images/success.png">
+</kbd>
 
 And the email will come through:
 
-<img style="border:5px solid #000000;" src="images/email.png">
+<kbd>
+  <img src="images/email.png">
+</kbd>
 
 # Troubleshooting
 If the events are not making it into xMatters, then check out the System Logs in ServiceNow for any error messages. The Inform with xMatters workflow uses the same logging setting as the Incident workflow, so update the Logging setting in the main xMatters Configuration page to get more or less detail. 
