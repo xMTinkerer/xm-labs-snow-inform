@@ -1,0 +1,2204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2017-07-06 22:40:33">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<application_name>xMatters</application_name>
+<application_scope>x_xma_xmatters</application_scope>
+<application_version>3.7.12</application_version>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description>Add on to include the Inform with xMatters functionality</description>
+<inserted/>
+<name>Inform with xMatters</name>
+<origin_sys_id/>
+<release_date/>
+<remote_sys_id>89eb07610fb3320037edb97ce1050e24</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>5b0c83ed0f73320037edb97ce1050e2d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_documentation_x_xma_xmatters_inform_with_xmatters_services_en</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_documentation element="services" label="Services" language="en" table="x_xma_xmatters_inform_with_xmatters"><sys_documentation action="INSERT_OR_UPDATE"><element>services</element><help/><hint/><label>Services</label><language>en</language><name>x_xma_xmatters_inform_with_xmatters</name><plural>Services</plural><sys_class_name>sys_documentation</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:32</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>9f5347a2dbd1b200a34fd421cf961916</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Services</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_documentation_x_xma_xmatters_inform_with_xmatters_services_en</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:32</sys_updated_on><url/><url_target/></sys_documentation></sys_documentation></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>130c07610fb3320037edb97ce1050ef8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>Inform with xMatters.Services</target_name>
+<type>Field Label</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_0039cb62dbd1b200a34fd421cf961980</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;false&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;x_xma_xmatters_inform_with_xmatters&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition/&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;xMatters Inform&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+
+    var config = new xMattersConfigExtended(),
+        log = new xMattersLogger( config.LOGLEVEL, 'xMatters Inform BR');
+		
+    log.debug( 'Sending xM Inform on insert.' );
+	
+	var xMInform = new xMattersInform();
+	var result = xMInform.sendInform( current );
+
+
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-07 18:26:05&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;0039cb62dbd1b200a34fd421cf961980&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;xMatters Inform&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_0039cb62dbd1b200a34fd421cf961980&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-07 19:05:02&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;async&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=0039cb62dbd1b200a34fd421cf961980"/&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>130c07610fb3320037edb97ce1050ef9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>xMatters Inform</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_page_712e46c1dbd53200a34fd421cf9619a5</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script/&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_xma_xmatters_xm_inform_with_xmatters_content.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+	
+
+&lt;script src="x_xma_xmatters.angular.min.jsdbx"&gt;&lt;/script&gt;
+&lt;script src="x_xma_xmatters.angular-ui-bootstrap.min.jsdbx"&gt;&lt;/script&gt;
+&lt;script src="x_xma_xmatters.xm_app_inform_xmatters.jsdbx"&gt;&lt;/script&gt;
+&lt;script src="x_xma_xmatters.angular.translate.min.jsdbx"&gt;&lt;/script&gt;
+&lt;script src="x_xma_xmatters.xm_mod_glide_ajax.jsdbx"&gt;&lt;/script&gt;
+&lt;script src="x_xma_xmatters.xm_mod_xmatters_service.jsdbx"&gt;&lt;/script&gt;
+&lt;script src="x_xma_xmatters.xm_mod_location_service.jsdbx"&gt;&lt;/script&gt;
+&lt;script src="x_xma_xmatters.ng-tags-input.min.jsdbx"&gt;&lt;/script&gt;
+	
+&lt;link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet"&gt;&lt;/link&gt;
+	
+&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"&gt;&lt;/link&gt;
+&lt;style&gt;
+	body {
+		font-family: SourceSansPro-Regular, SourceSansPro, "Helvetica Neue", Arial;
+	        padding-top: 0;
+	}
+	.xm-label {
+		font-size: 13px;
+		font-weight: normal;
+	}
+	input.xm-tracked.ng-dirty, textarea.xm-tracked.ng-dirty {
+		border: 1px orange solid;
+	}
+	form.ng-submitted input.ng-invalid, form.ng-submitted textarea.ng-invalid {
+		border: 1px red solid;
+	}
+	a.xm-help {
+		margin-left: 5px;
+		display: inline-block !important;	
+	}
+	.ng-dirty .tags {
+		/**border-color: orange; **/
+	}
+	.xm-tags-input-group .input-group-btn .btn {
+	   height: 34px;
+	}
+	.tags {
+	    border: 1px solid #ccc !important;
+	}
+	form.ng-submitted .ng-invalid .tags {
+		border-color: red !important;
+	}
+	tags-input .tags {
+	     box-shadow: none !important;
+	}
+	tags-input .tags .tag-item {
+	    background: #445465;
+	    border: 0;
+	}
+	tags-input .tags .tag-item .remove-button {
+	    color: white;
+	}
+	tags-input .tags .tag-item .remove-button:hover {
+	    color: #bec1c6;;
+	}
+	tags-input .tags .tag-item.selected {
+		background-color: #ae1b1f;
+	}
+	.xm-input-group-btn {
+		background-color: #f6f6f6;
+		border: solid 1px #cccccc;
+		width: 106px;
+	}
+	.xm-left {
+	     float: left;
+	}
+	.xm-right {
+	    float: right;
+	}
+	.xm-tag-feedback {
+	   right: 10px;
+	}
+	.xm-error {
+	   color: red;
+	   font-size: 13px;
+	}
+	.xm-btn-default, .xm-btn-default:focus, .xm-btn-default:hover {
+	    font-family: SourceSansPro-Regular, SourceSansPro, "Helvetica Neue", Arial;   
+	    color: #343d47;
+	    background-color: rgba(255, 255, 255, 0.45);
+	    border-color: #bdc0c4;
+	}
+	tags-input .tags .tag-item {
+	    font-family: SourceSansPro-Regular, SourceSansPro, "Helvetica Neue", Arial;   
+	}
+	tags-input .tags .input {
+	    font-family: SourceSansPro-Regular, SourceSansPro, "Helvetica Neue", Arial;   
+	}
+	tags-input .autocomplete .suggestion-item {
+	    font-family: SourceSansPro-Regular, SourceSansPro, "Helvetica Neue", Arial;   
+	}
+	h4.xm-header {
+	     font-size: 21px;
+	     font-weight: normal;
+	     margin-top: 0;
+	}
+	.xm-left-icon {
+	    margin-right: 5px;
+	}
+	.xm-right-icon {
+	    margin-left: 0;
+	}
+	.xm-right-icon .remove-button .fa {
+	     font-size: 14px;
+	     vertical-align: text-top;
+	}
+	.form-control-feedback .fa {
+	     color: rgb(52, 61, 71);
+	}
+	.xm-success-message {
+	    max-width: 80%;
+	    min-width: 375px;
+	    padding: 0 40px;
+	}
+	.xm-cancel-button {
+		margin-left: 15px;
+	}
+&lt;/style&gt;
+&lt;div id="inform" ng-app="xm.inform-xm" class="container-fluid" ng-cloak=""&gt;
+&lt;div ng-controller="informCtlr"&gt;
+	&lt;h4 class="xm-header"&gt;{{ 'INFORM_XM.TITLE' | translate }}&lt;/h4&gt;
+		&lt;form name="informXMForm" novalidate=""&gt;
+			
+			&lt;!-- 1st Row --&gt;
+			&lt;div class="row"&gt;
+				&lt;div class="form-group col-sm-4" ng-class="informXMForm.update_type.$error.required ? 'is-required' : 'is-filled'"&gt;
+					&lt;span class="required-marker" &gt;&lt;/span&gt;
+					&lt;label class="xm-label"&gt;{{ 'INFORM_XM.LABEL.UPDATE_TYPE' | translate }}&lt;/label&gt;
+					&lt;select class="form-control" ng-model="update_type" id="update_type" name="update_type" required="required"&gt;
+						&lt;option ng-repeat="updateOpt in update_type_options" value="{{updateOpt.value}}" &gt;{{ updateOpt.label }}&lt;/option&gt;
+					&lt;/select&gt;
+					&lt;div class="xm-error" ng-messages="informXMForm.update_type.$error" ng-show="informXMForm.$submitted"&gt;
+						&lt;div ng-message="required"&gt;{{ 'INFORM_XM.ERROR.REQUIRED' | translate }}&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				
+				&lt;div class="form-group col-sm-4 col-sm-offset-2"&gt;
+					&lt;label class="xm-label"&gt;{{ 'INFORM_XM.LABEL.PARENT_INCIDENT' | translate }}&lt;/label&gt;
+					&lt;input type="text" class="form-control" ng-model="incident.number" id="incident.number" name="incident.number" readonly="readonly"/&gt;
+				&lt;/div&gt;
+				
+			&lt;/div&gt;
+			
+			&lt;!-- Next Row --&gt;
+			&lt;div class="row"&gt;
+				
+				&lt;div class="form-group col-sm-4" ng-class="informXMForm.first_reported.$error.required ? 'is-required' : 'is-filled'"&gt;
+					&lt;span class="required-marker" &gt;&lt;/span&gt;
+					&lt;label class="xm-label"&gt;{{ 'INFORM_XM.LABEL.FIRST_REPORTED' | translate }}&lt;/label&gt;
+
+					&lt;p class="input-group"&gt;
+					
+					  &lt;input type="text" class="form-control" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="first_reported" is-open="calendarPopup.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" /&gt;
+					  &lt;span class="input-group-btn"&gt;
+						&lt;button type="button" class="btn btn-default" ng-click="openCalendarPopup()"&gt;&lt;i class="glyphicon glyphicon-calendar"&gt;&lt;/i&gt;&lt;/button&gt;
+					  &lt;/span&gt;
+					&lt;/p&gt;
+
+					&lt;uib-timepicker ng-model="first_reported" ng-change="changed()" show-spinners="false"&gt;&lt;/uib-timepicker&gt;
+				
+					&lt;div class="xm-error" ng-messages="informXMForm.first_reported.$error" ng-show="informXMForm.$submitted"&gt;
+						&lt;div ng-message="required"&gt;{{ 'INFORM_XM.ERROR.REQUIRED' | translate }}&lt;/div&gt;
+					&lt;/div&gt;
+					
+				&lt;/div&gt;
+
+			&lt;/div&gt;
+			
+			&lt;!-- Next Row --&gt;
+			&lt;div class="row"&gt;
+				&lt;div class="form-group col-sm-6" ng-class="informXMForm.locations.$error.required ? 'is-required' : 'is-filled'"&gt;
+					&lt;label class="xm-label"&gt;{{ 'INFORM_XM.LABEL.LOCATIONS' | translate }}&lt;/label&gt;
+						&lt;tags-input ng-model="locations" id="locations" name="locations" required="required" placeholder="Add Locations" add-from-autocomplete-only="true"&gt;
+							&lt;auto-complete source="getLocations( $query )" load-on-down-arrow="true"&gt;&lt;/auto-complete&gt;
+						&lt;/tags-input&gt;
+				&lt;/div&gt;
+				&lt;div class="form-group col-sm-6" ng-class="informXMForm.services.$error.required ? 'is-required' : 'is-filled'"&gt;
+					&lt;label class="xm-label"&gt;{{ 'INFORM_XM.LABEL.SERVICES' | translate }}&lt;/label&gt;
+						&lt;tags-input ng-model="services" id="services" name="services" required="required" placeholder="Add Services" add-from-autocomplete-only="true"&gt;
+							&lt;auto-complete source="getServices( $query )"&gt;&lt;/auto-complete&gt;
+						&lt;/tags-input&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			
+			&lt;!-- Next Row --&gt;
+			&lt;div class="row"&gt;
+				&lt;div class="form-group col-md-12" ng-class="informXMForm.business_impact.$error.required ? 'is-required' : 'is-filled'"&gt;
+					&lt;span class="required-marker" &gt;&lt;/span&gt;
+					&lt;label class="xm-label"&gt;{{ 'INFORM_XM.LABEL.BUSINESS_IMPACT' | translate }}&lt;/label&gt;
+					&lt;textarea class="form-control" ng-model="business_impact" id="business_impact" name="business_impact" required="required" ng-maxlength="2000" /&gt;
+					&lt;div class="xm-error" ng-messages="informXMForm.business_impact.$error" ng-show="informXMForm.$submitted"&gt;
+						&lt;div ng-message="required"&gt;{{ 'INFORM_XM.ERROR.REQUIRED' | translate }}&lt;/div&gt;
+						&lt;div ng-message="maxlength"&gt;{{ 'INFORM_XM.ERROR.MAX_LENGTH' | translate:'{ max_length: 200 }' }}&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			
+			&lt;!-- Next Row --&gt;
+			&lt;div class="row"&gt;
+				&lt;div class="form-group col-md-12" ng-class="informXMForm.update.$error.required ? 'is-required' : 'is-filled'"&gt;
+					&lt;span class="required-marker" &gt;&lt;/span&gt;
+					&lt;label class="xm-label"&gt;{{ 'INFORM_XM.LABEL.UPDATE' | translate }}&lt;/label&gt;
+					&lt;textarea class="form-control" ng-model="update" id="update" name="update" required="required" ng-maxlength="2000" /&gt;
+					&lt;div class="xm-error" ng-messages="informXMForm.update.$error" ng-show="informXMForm.$submitted"&gt;
+						&lt;div ng-message="required"&gt;{{ 'INFORM_XM.ERROR.REQUIRED' | translate }}&lt;/div&gt;
+						&lt;div ng-message="maxlength"&gt;{{ 'INFORM_XM.ERROR.MAX_LENGTH' | translate:'{ max_length: 200 }' }}&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			
+			&lt;!-- Last Row --&gt;
+			&lt;div class="row"&gt;
+				&lt;div class="col-md-4"&gt;
+					&lt;button class="btn btn-default xm-btn-default" ng-click="submit()"&gt;{{ 'INFORM_XM.BUTTON.SUBMIT' | translate }}&lt;/button&gt;
+					&lt;button class="btn btn-default xm-btn-default xm-cancel-button" type="button" ng-click="cancel()"&gt;{{ 'INFORM_XM.BUTTON.CANCEL' | translate }}&lt;/button&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			
+		&lt;/form&gt;
+	
+	
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;xm_inform_with_xmatters_content&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-02 22:22:40&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;712e46c1dbd53200a34fd421cf9619a5&lt;/sys_id&gt;&lt;sys_mod_count&gt;101&lt;/sys_mod_count&gt;&lt;sys_name&gt;xm_inform_with_xmatters_content&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_712e46c1dbd53200a34fd421cf9619a5&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-07-06 22:29:23&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>130c07610fb3320037edb97ce1050efa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>xm_inform_with_xmatters_content</target_name>
+<type>UI Page</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_x_xma_xmatters_inform_with_xmatters_locations</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update&gt;&lt;sys_dictionary action="INSERT_OR_UPDATE" element="locations" table="x_xma_xmatters_inform_with_xmatters"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;attributes/&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Locations&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;locations&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;1000&lt;/max_length&gt;&lt;name&gt;x_xma_xmatters_inform_with_xmatters&lt;/name&gt;&lt;next_element/&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-07 17:59:30&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;c2a24f62dbd1b200a34fd421cf961982&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Locations&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_dictionary_x_xma_xmatters_inform_with_xmatters_locations&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-07 17:59:30&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_dictionary&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>130c83ed0f73320037edb97ce1050e2e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>x_xma_xmatters_inform_with_xmatters.locations</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_number_575347a2dbd1b200a34fd421cf96192d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number"><sys_number action="INSERT_OR_UPDATE"><category display_value="" name="x_xma_xmatters_inform_with_xmatters">x_xma_xmatters_inform_with_xmatters</category><maximum_digits>7</maximum_digits><number>1000</number><prefix>XMI</prefix><sys_class_name>sys_number</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:33</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>575347a2dbd1b200a34fd421cf96192d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>XMI</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_number_575347a2dbd1b200a34fd421cf96192d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:33</sys_updated_on></sys_number></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>170c07610fb3320037edb97ce1050ef8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>XMI</target_name>
+<type>Number</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_include_d5e50ba2dbd1b200a34fd421cf961962</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_xma_xmatters.xMattersInform&lt;/api_name&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;xMattersInform&lt;/name&gt;&lt;script&gt;&lt;![CDATA[gs.include("xMattersLogger");
+gs.include("xMattersConfigExtended");
+gs.include("xMattersDataHelper");
+gs.include("xMattersEventExtended");
+
+var xMattersInform = Class.create();
+
+xMattersInform.prototype = {
+	
+  initialize : function( config, dataHelper ) {
+    if ( config )
+        this.config = config;
+    else 
+        this.config = new xMattersConfigExtended();
+
+    this.log = new xMattersLogger( this.config.LOGLEVEL, 'xMattersInform' );
+
+    if ( dataHelper ) {
+        this.dataHelper = dataHelper;
+    } else {
+        this.dataHelper = new xMattersDataHelper();
+    }
+    this.json = new global.JSON();
+  },
+  
+  /**
+  * @param rec current record
+  * @param triggerRule String containing the trigger rule
+  */
+  sendInform : function( rec ) {
+
+    var xMEvent = new xMattersEventExtended( this.config );
+
+    var parentIncident = new GlideRecord( 'incident' );
+    parentIncident.get( rec.parent_incident );
+    xMEvent.addAllIncidentProperties( parentIncident );
+
+    xMEvent.addProperty( 'business_impact', rec.business_impact );
+    xMEvent.addProperty( 'first_reported',  rec.first_reported );
+    xMEvent.addProperty( 'locations',       rec.locations );
+    xMEvent.addProperty( 'services',        rec.services );
+    xMEvent.addProperty( 'update',          rec.getValue( 'update' ) ); // GlideRecords have a function called update
+    xMEvent.addProperty( 'update_type',     rec.update_type );
+    xMEvent.addProperty( 'inform_number',   rec.number );
+  	xMEvent.addProperty( 'inform_record_sysid', rec.sys_id );
+
+    xMEvent.addRecipient( 'dummy' );
+
+
+    xMEvent.setWebserviceURL( this.config.INFORM.FORM );
+
+    var resp = xMEvent.send();
+    this.log.debug( 'Resp: ' + resp );
+	  
+  },
+
+  /**
+  * Terminates an incident in the xMatters (alarmpoint) Engine
+  * @param rec current rec
+  */
+  terminateInform : function( rec ) {
+    // Terminate the related events in xMatters
+    try {
+      (new xMattersEventExtended( this.config, this.dataHelper ) ).terminateEvents( 'inform_number', String( rec.number ) );
+      return "[xMatters] - Terminated existing events for this Inform record";
+    } catch (e) {
+      return "[xMatters] - Termination of events failed: " + this.json.encoe( e );
+    }
+  }
+};
+
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-07 18:10:53&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;d5e50ba2dbd1b200a34fd421cf961962&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_name&gt;xMattersInform&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_d5e50ba2dbd1b200a34fd421cf961962&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-08 19:36:10&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>170c07610fb3320037edb97ce1050ef9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>xMattersInform</target_name>
+<type>Script Include</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_section_1ecc8fe2dbd1b200a34fd421cf961912</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="" section_id="1ecc8fe2dbd1b200a34fd421cf961912" sys_domain="global" table="x_xma_xmatters_inform_with_xmatters" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>.begin_split</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 18:40:43</sys_created_on><sys_id>dacc8fe2dbd1b200a34fd421cf961915</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_xma_xmatters_inform_with_xmatters" sys_domain="global" view="Default view">1ecc8fe2dbd1b200a34fd421cf961912</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 18:40:43</sys_updated_on><sys_user/><type>.begin_split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>number</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 18:40:43</sys_created_on><sys_id>5ecc8fe2dbd1b200a34fd421cf961915</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_xma_xmatters_inform_with_xmatters" sys_domain="global" view="Default view">1ecc8fe2dbd1b200a34fd421cf961912</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 18:40:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 18:40:43</sys_created_on><sys_id>decc8fe2dbd1b200a34fd421cf961915</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_xma_xmatters_inform_with_xmatters" sys_domain="global" view="Default view">1ecc8fe2dbd1b200a34fd421cf961912</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 18:40:43</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>first_reported</element><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 18:40:43</sys_created_on><sys_id>52cc8fe2dbd1b200a34fd421cf961916</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_xma_xmatters_inform_with_xmatters" sys_domain="global" view="Default view">1ecc8fe2dbd1b200a34fd421cf961912</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 18:40:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.end_split</element><position>4</position><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 18:40:43</sys_created_on><sys_id>d2cc8fe2dbd1b200a34fd421cf961916</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_xma_xmatters_inform_with_xmatters" sys_domain="global" view="Default view">1ecc8fe2dbd1b200a34fd421cf961912</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 18:40:43</sys_updated_on><sys_user/><type>.end_split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>locations</element><position>5</position><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 18:40:43</sys_created_on><sys_id>56cc8fe2dbd1b200a34fd421cf961916</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_xma_xmatters_inform_with_xmatters" sys_domain="global" view="Default view">1ecc8fe2dbd1b200a34fd421cf961912</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 18:40:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.begin_split</element><position>6</position><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 18:40:43</sys_created_on><sys_id>d6cc8fe2dbd1b200a34fd421cf961916</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_xma_xmatters_inform_with_xmatters" sys_domain="global" view="Default view">1ecc8fe2dbd1b200a34fd421cf961912</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 18:40:43</sys_updated_on><sys_user/><type>.begin_split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>parent_incident</element><position>7</position><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 18:40:43</sys_created_on><sys_id>5acc8fe2dbd1b200a34fd421cf961916</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_xma_xmatters_inform_with_xmatters" sys_domain="global" view="Default view">1ecc8fe2dbd1b200a34fd421cf961912</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 18:40:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>8</position><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 18:40:43</sys_created_on><sys_id>dacc8fe2dbd1b200a34fd421cf961916</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_xma_xmatters_inform_with_xmatters" sys_domain="global" view="Default view">1ecc8fe2dbd1b200a34fd421cf961912</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 18:40:43</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>update_type</element><position>9</position><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 18:40:43</sys_created_on><sys_id>5ecc8fe2dbd1b200a34fd421cf961916</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_xma_xmatters_inform_with_xmatters" sys_domain="global" view="Default view">1ecc8fe2dbd1b200a34fd421cf961912</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 18:40:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.end_split</element><position>10</position><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 18:40:43</sys_created_on><sys_id>decc8fe2dbd1b200a34fd421cf961916</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_xma_xmatters_inform_with_xmatters" sys_domain="global" view="Default view">1ecc8fe2dbd1b200a34fd421cf961912</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 18:40:43</sys_updated_on><sys_user/><type>.end_split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>business_impact</element><position>11</position><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 18:40:43</sys_created_on><sys_id>52cc8fe2dbd1b200a34fd421cf961917</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_xma_xmatters_inform_with_xmatters" sys_domain="global" view="Default view">1ecc8fe2dbd1b200a34fd421cf961912</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 18:40:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>services</element><position>12</position><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 18:40:43</sys_created_on><sys_id>d2cc8fe2dbd1b200a34fd421cf961917</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_xma_xmatters_inform_with_xmatters" sys_domain="global" view="Default view">1ecc8fe2dbd1b200a34fd421cf961912</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 18:40:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>update</element><position>13</position><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 18:40:43</sys_created_on><sys_id>56cc8fe2dbd1b200a34fd421cf961917</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_xma_xmatters_inform_with_xmatters" sys_domain="global" view="Default view">1ecc8fe2dbd1b200a34fd421cf961912</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 18:40:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>x_xma_xmatters_inform_with_xmatters</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 18:40:43</sys_created_on><sys_customer_update>true</sys_customer_update><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>1ecc8fe2dbd1b200a34fd421cf961912</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_xma_xmatters_inform_with_xmatters</sys_name><sys_overrides/><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_ui_section_1ecc8fe2dbd1b200a34fd421cf961912</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 18:40:43</sys_updated_on><sys_user/><title>true</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>170c07610fb3320037edb97ce1050efa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>Inform with xMatters</target_name>
+<type>Form Layout</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_x_xma_xmatters_inform_with_xmatters_services</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update&gt;&lt;sys_dictionary action="INSERT_OR_UPDATE" element="services" table="x_xma_xmatters_inform_with_xmatters"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;attributes/&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Services&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;services&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;1000&lt;/max_length&gt;&lt;name&gt;x_xma_xmatters_inform_with_xmatters&lt;/name&gt;&lt;next_element/&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-07 17:59:31&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;6ab2cb62dbd1b200a34fd421cf96194c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Services&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_dictionary_x_xma_xmatters_inform_with_xmatters_services&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-07 17:59:31&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_dictionary&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>1b0c07610fb3320037edb97ce1050ef7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>x_xma_xmatters_inform_with_xmatters.services</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_a3bf9655db1d3200a34fd421cf961964</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Semicolon separated list of available services</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>x_xma_xmatters.inform.services</name><read_roles/><suffix>inform.services</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-03 18:11:40</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>a3bf9655db1d3200a34fd421cf961964</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_xma_xmatters.inform.services</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_properties_a3bf9655db1d3200a34fd421cf961964</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-08 23:58:12</sys_updated_on><type>string</type><value>Service1;Service2;Email;Chat;Support site</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=a3bf9655db1d3200a34fd421cf961964"/></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>1b0c07610fb3320037edb97ce1050ef8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>x_xma_xmatters.inform.services</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_c75307a2dbd1b200a34fd421cf9619f4</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><condition/><description>Default access control on x_xma_xmatters_inform_with_xmatters</description><name>x_xma_xmatters_inform_with_xmatters</name><operation display_value="read">read</operation><script/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:31</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>c75307a2dbd1b200a34fd421cf9619f4</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_xma_xmatters_inform_with_xmatters</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_security_acl_c75307a2dbd1b200a34fd421cf9619f4</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:31</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>1b0c07610fb3320037edb97ce1050ef9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>x_xma_xmatters_inform_with_xmatters</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_documentation_x_xma_xmatters_inform_with_xmatters_first_reported_en</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_documentation element="first_reported" label="First Reported" language="en" table="x_xma_xmatters_inform_with_xmatters"><sys_documentation action="INSERT_OR_UPDATE"><element>first_reported</element><help/><hint/><label>First Reported</label><language>en</language><name>x_xma_xmatters_inform_with_xmatters</name><plural>First Reported</plural><sys_class_name>sys_documentation</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:32</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>d35347a2dbd1b200a34fd421cf961915</sys_id><sys_mod_count>0</sys_mod_count><sys_name>First Reported</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_documentation_x_xma_xmatters_inform_with_xmatters_first_reported_en</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:32</sys_updated_on><url/><url_target/></sys_documentation></sys_documentation></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>1f0c07610fb3320037edb97ce1050ef7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>Inform with xMatters.First Reported</target_name>
+<type>Field Label</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_90ef5655db1d3200a34fd421cf9619c8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="xMInformProperties">562f1255db1d3200a34fd421cf9619a5</category><order>500</order><property display_value="x_xma_xmatters.inform.services.uuid" name="x_xma_xmatters.inform.services.uuid">38dfd655db1d3200a34fd421cf961930</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-03 18:12:06</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>90ef5655db1d3200a34fd421cf9619c8</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_xma_xmatters.inform.services.uuid.xMInformProperties</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_properties_category_m2m_90ef5655db1d3200a34fd421cf9619c8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-03 18:12:20</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>1f0c07610fb3320037edb97ce1050ef8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>x_xma_xmatters.inform.services.uuid.xMInformProperties</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_cb5307a2dbd1b200a34fd421cf9619f3</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:31</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>cb5307a2dbd1b200a34fd421cf9619f3</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_xma_xmatters_inform_with_xmatters.itil</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_security_acl display_value="x_xma_xmatters_inform_with_xmatters">8f5307a2dbd1b200a34fd421cf9619f2</sys_security_acl><sys_update_name>sys_security_acl_role_cb5307a2dbd1b200a34fd421cf9619f3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:31</sys_updated_on><sys_user_role display_value="itil" name="itil">282bf1fac6112285017366cb5f867469</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>1f0c07610fb3320037edb97ce1050ef9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>x_xma_xmatters_inform_with_xmatters.itil</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_app_module_835307a2dbd1b200a34fd421cf9619f1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Integration - xMatters">1b9f490f7b02f1008e0b707d784d4d81</application><assessment/><content_page/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Inform with xMatters</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_xma_xmatters_inform_with_xmatters</name><order>611</order><override_menu_roles>false</override_menu_roles><query/><report/><roles>itil</roles><survey/><survey_overwrite>true</survey_overwrite><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:31</sys_created_on><sys_customer_update>true</sys_customer_update><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>835307a2dbd1b200a34fd421cf9619f1</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Inform with xMatters Records</sys_name><sys_overrides/><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_app_module_835307a2dbd1b200a34fd421cf9619f1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-08 18:57:53</sys_updated_on><timeline_page/><title>Inform with xMatters Records</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>1f0c83ed0f73320037edb97ce1050e2d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>Inform with xMatters Records</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_documentation_x_xma_xmatters_inform_with_xmatters_update_en</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_documentation element="update" label="Update" language="en" table="x_xma_xmatters_inform_with_xmatters"><sys_documentation action="INSERT_OR_UPDATE"><element>update</element><help/><hint/><label>Update</label><language>en</language><name>x_xma_xmatters_inform_with_xmatters</name><plural>Updates</plural><sys_class_name>sys_documentation</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:32</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>d75347a2dbd1b200a34fd421cf961917</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Update</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_documentation_x_xma_xmatters_inform_with_xmatters_update_en</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:32</sys_updated_on><url/><url_target/></sys_documentation></sys_documentation></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>530c07610fb3320037edb97ce1050ef8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>Inform with xMatters.Update</target_name>
+<type>Field Label</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_include_1ea6139ddb5d3200a34fd421cf9619d1</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_xma_xmatters.xMattersAjaxExtended&lt;/api_name&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;xMattersAjaxExtended&lt;/name&gt;&lt;script&gt;&lt;![CDATA[gs.include("xMattersConfigExtended");
+gs.include( "xMattersAjaxEngage" );
+
+var xMattersAjaxExtended = Class.create();
+
+// Object.extendsObject apparently only takes 2 parameters,
+// so to add more than two objects, we call this twice. 
+xMattersAjaxExtended.prototype = Object.extendsObject( global.AbstractAjaxProcessor, Object.extendsObject( new xMattersAjaxEngage(), {
+
+
+		/**
+	 * Submits a new Inform with xMatters record in ServiceNow (note that this does not perform any communication between ServiceNow and xMatters)
+	 * When called from glide ajax, must have a stringified "form_data" parameter. This parameter should look like the following:
+	 * 	{
+
+	 * 	}
+	 * 
+	 * @return {String} A stringified JSON object with the following details:
+	 * {
+	 * 		"success": true or false depending on whether the submission was successful,
+	 * 		"error": only present if "success" = false - a string describing what went wrong,
+	 * 		"data": only present if "success" = true - an object with the following properties:
+	 * 			{
+	 * 				"sys_id": the id of the new Engage with xMatters record
+	 * 			}
+	 * }
+	 */
+	submitInformWithXMatters: function() {
+		var response;
+		try {
+			var form_data = this.getParameter( 'form_data' );	
+			var formData = new global.JSON().decode( form_data );
+
+			var informRequest = new GlideRecord( 'x_xma_xmatters_inform_with_xmatters' );
+			informRequest.initialize();
+			
+			informRequest.business_impact = formData.business_impact;
+			informRequest.first_reported  = formData.first_reported.replace( /T/g, ' ' );
+			informRequest.locations       = formData.locations;
+			informRequest.services        = formData.services;
+			informRequest.update          = formData.update;
+			informRequest.update_type     = formData.update_type;
+			informRequest.parent_incident = formData.parent_incident;
+
+			informRequest.insert();
+
+			response = {
+				success: true,
+				data: { sys_id: String( informRequest.sys_id ) }
+			};
+		} catch( e ) {
+			response = {
+				success: false,
+				error: String( e )
+			};
+		}
+		return new global.JSON().encode( response );
+	},
+	
+	
+	
+	
+	getLocations: function() {
+		var conf = new xMattersConfigExtended();
+		response = {
+			success: true,
+			data: conf.INFORM.LOCATIONS.LIST
+		};
+		
+		return new global.JSON().encode( response );
+	},
+	
+	getServices: function() {
+		var conf = new xMattersConfigExtended();
+		response = {
+			success: true,
+			data: conf.INFORM.SERVICES.LIST
+		};
+		return new global.JSON().encode( response );
+	},
+	
+	getIncident: function() {
+
+		var sys_id = this.getParameter( 'sysparm_sys_id' );	
+		var rec = new GlideRecord( 'incident' );
+		rec.get( sys_id );
+		
+		var fields = [ 'number', 'short_description' ];
+		
+		response =  {
+			success: true,
+			data: this._getIncFields( fields, rec )
+		};
+		
+		return new global.JSON().encode( response );
+		
+	},
+	
+	// There isn't a GlideRecord.toJSON function, so
+	// we'll fake it by just grabbing a handful of fields
+	_getIncFields: function( fields, rec ) {
+
+		var resp = {};
+		for( var f in fields ) {
+			key = fields[f];
+			val = rec[ fields[f] ].getDisplayValue();
+			gs.info( 'Key: ' + key + '. Val: ' + val );
+			resp[ key ] = val;
+		}
+		
+		return resp;
+	},
+		
+    type: 'xMattersAjaxExtended'
+}));]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-03 22:31:13&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;1ea6139ddb5d3200a34fd421cf9619d1&lt;/sys_id&gt;&lt;sys_mod_count&gt;36&lt;/sys_mod_count&gt;&lt;sys_name&gt;xMattersAjaxExtended&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_1ea6139ddb5d3200a34fd421cf9619d1&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-08 19:09:48&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>530c07610fb3320037edb97ce1050ef9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>xMattersAjaxExtended</target_name>
+<type>Script Include</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_page_ac8a4a09dbd53200a34fd421cf961974</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script/&gt;&lt;description&gt;This is just the wrapper page. The angular in the xm_inform_with_xmatters_content ui page interferes(?) with other angular? so we wrap it in an iframe. &lt;/description&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_xma_xmatters_xm_inform_with_xmatters.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+
+
+	
+	
+&lt;style&gt;
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+.xm-dialog-form {
+	width: 400px;
+	height: 650px;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+	.xm-dialog-form {
+		width: 500px;
+		height: 650px;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.xm-dialog-form {
+		width: 700px;
+		height: 650px;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+	.xm-dialog-form {
+		width: 750px;
+		height: 650px;
+	}
+}
+.xm-embed-iframe {
+  height: 100%;
+}
+&lt;/style&gt;
+	&lt;div class="xm-dialog-form"&gt;
+		&lt;div class="embed-responsive xm-embed-iframe"&gt;
+			&lt;iframe name="dialog_frame" id="dialog_frame" src="/x_xma_xmatters_xm_inform_with_xmatters_content.do?sysparm_nostack=true&amp;amp;incident_id=${HTML:sysparm_sysID}" class="embed-responsive-item"&gt;&lt;/iframe&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+    &lt;script&gt;
+	(function() {
+		var childMessageListener = function(event) {
+			if( event.origin !== window.location.origin ) {
+				console.log("Received message from unexpected origin: " + event.origin);
+			   return;
+			} else {
+				var data = event.data;
+				if(data.type === 'DIALOG_CLOSE') {
+					if(data.message) {
+						g_form.addInfoMessage(data.message);
+						console.log( 'addInfoMessage sent' );
+					}
+					GlideDialogWindow.get().destroy();
+				} else {
+					console.log("Unhandled message type: " + data.type);
+				}
+			}
+		}
+
+		if(window.addEventListener) {
+			addEventListener('message', childMessageListener, false);
+		} else {
+			attachEvent("onmessage", childMessageListener);
+		}
+	})();
+	&lt;/script&gt;
+	
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;xm_inform_with_xmatters&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-02 22:04:05&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;ac8a4a09dbd53200a34fd421cf961974&lt;/sys_id&gt;&lt;sys_mod_count&gt;18&lt;/sys_mod_count&gt;&lt;sys_name&gt;xm_inform_with_xmatters&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_ac8a4a09dbd53200a34fd421cf961974&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-08 23:26:19&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>530c07610fb3320037edb97ce1050efa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>xm_inform_with_xmatters</target_name>
+<type>UI Page</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_x_xma_xmatters_inform_with_xmatters_null</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update&gt;&lt;sys_dictionary action="INSERT_OR_UPDATE" element="" table="x_xma_xmatters_inform_with_xmatters"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;attributes/&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element/&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;internal_type display_value="Collection"&gt;collection&lt;/internal_type&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;name&gt;x_xma_xmatters_inform_with_xmatters&lt;/name&gt;&lt;next_element/&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-07 17:59:32&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;435307a2dbd1b200a34fd421cf9619f9&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;x_xma_xmatters_inform_with_xmatters&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_dictionary_x_xma_xmatters_inform_with_xmatters_null&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-07 17:59:32&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_dictionary&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>530c83ed0f73320037edb97ce1050e2e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>Inform with xMatters</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_184f9255db1d3200a34fd421cf9619fe</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Inform with xMatters Form Endpoint: specifies the REST URL endpoint for the ServiceNow Communication Plan's Inform with xMatters form&#13;
+</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>x_xma_xmatters.inform.endpoint</name><read_roles/><suffix>inform.endpoint</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-03 18:09:52</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>184f9255db1d3200a34fd421cf9619fe</sys_id><sys_mod_count>3</sys_mod_count><sys_name>x_xma_xmatters.inform.endpoint</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_properties_184f9255db1d3200a34fd421cf9619fe</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-08 23:58:12</sys_updated_on><type>string</type><value>https://yourinstance.hosted.xmatters.com/reapi/2015-04-01/forms/UUID/triggers</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=184f9255db1d3200a34fd421cf9619fe"/></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>570c07610fb3320037edb97ce1050ef8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>x_xma_xmatters.inform.endpoint</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_035307a2dbd1b200a34fd421cf9619f6</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><condition/><description>Default access control on x_xma_xmatters_inform_with_xmatters</description><name>x_xma_xmatters_inform_with_xmatters</name><operation display_value="write">write</operation><script/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:31</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>035307a2dbd1b200a34fd421cf9619f6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_xma_xmatters_inform_with_xmatters</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_security_acl_035307a2dbd1b200a34fd421cf9619f6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:31</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>570c07610fb3320037edb97ce1050ef9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>x_xma_xmatters_inform_with_xmatters</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>ua_table_licensing_config_d35347a2dbd1b200a34fd421cf96191f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="ua_table_licensing_config"><ua_table_licensing_config action="INSERT_OR_UPDATE"><is_fulfillment>false</is_fulfillment><name>x_xma_xmatters_inform_with_xmatters</name><owner_condition table="x_xma_xmatters_inform_with_xmatters">sys_created_by=javascript:gs.getUserName()^EQ<item endquery="false" field="sys_created_by" goto="false" newquery="false" operator="=" or="false" value="javascript:gs.getUserName()"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></owner_condition><sys_class_name>ua_table_licensing_config</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:32</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>d35347a2dbd1b200a34fd421cf96191f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_xma_xmatters_inform_with_xmatters</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>ua_table_licensing_config_d35347a2dbd1b200a34fd421cf96191f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:32</sys_updated_on></ua_table_licensing_config></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>570c07610fb3320037edb97ce1050efa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>x_xma_xmatters_inform_with_xmatters</target_name>
+<type>Table Subscription Configuration</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_x_xma_xmatters_inform_with_xmatters_update</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update&gt;&lt;sys_dictionary action="INSERT_OR_UPDATE" element="update" table="x_xma_xmatters_inform_with_xmatters"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;attributes/&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Update&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;update&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;2000&lt;/max_length&gt;&lt;name&gt;x_xma_xmatters_inform_with_xmatters&lt;/name&gt;&lt;next_element/&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-07 17:59:31&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;e9d20b62dbd1b200a34fd421cf96195b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Update&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_dictionary_x_xma_xmatters_inform_with_xmatters_update&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-07 17:59:31&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_dictionary&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>5b0c07610fb3320037edb97ce1050ef7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>x_xma_xmatters_inform_with_xmatters.update</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_562f1255db1d3200a34fd421cf9619a5</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_properties_category"&gt;&lt;sys_properties_category action="INSERT_OR_UPDATE"&gt;&lt;name&gt;xMInformProperties&lt;/name&gt;&lt;sys_class_name&gt;sys_properties_category&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-03 18:09:15&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;562f1255db1d3200a34fd421cf9619a5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;xMInformProperties&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_properties_category_562f1255db1d3200a34fd421cf9619a5&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-03 18:09:15&lt;/sys_updated_on&gt;&lt;title&gt;&lt;![CDATA[&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;span style="font-size: 10pt;"&gt;Properties to configure for the Inform with xMatters feature&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt; &lt;/p&gt;]]&gt;&lt;/title&gt;&lt;/sys_properties_category&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=562f1255db1d3200a34fd421cf9619a5"/&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>5b0c07610fb3320037edb97ce1050ef8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>xMInformProperties</target_name>
+<type>System Property Category</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_075307a2dbd1b200a34fd421cf9619f5</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:31</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>075307a2dbd1b200a34fd421cf9619f5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_xma_xmatters_inform_with_xmatters.itil</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_security_acl display_value="x_xma_xmatters_inform_with_xmatters">c75307a2dbd1b200a34fd421cf9619f4</sys_security_acl><sys_update_name>sys_security_acl_role_075307a2dbd1b200a34fd421cf9619f5</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:31</sys_updated_on><sys_user_role display_value="itil" name="itil">282bf1fac6112285017366cb5f867469</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>5b0c07610fb3320037edb97ce1050ef9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>x_xma_xmatters_inform_with_xmatters.itil</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_documentation_x_xma_xmatters_inform_with_xmatters_locations_en</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_documentation element="locations" label="Locations" language="en" table="x_xma_xmatters_inform_with_xmatters"><sys_documentation action="INSERT_OR_UPDATE"><element>locations</element><help/><hint/><label>Locations</label><language>en</language><name>x_xma_xmatters_inform_with_xmatters</name><plural>Locations</plural><sys_class_name>sys_documentation</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:32</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>1f5347a2dbd1b200a34fd421cf961915</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Locations</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_documentation_x_xma_xmatters_inform_with_xmatters_locations_en</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:32</sys_updated_on><url/><url_target/></sys_documentation></sys_documentation></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>5f0c07610fb3320037edb97ce1050ef7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>Inform with xMatters.Locations</target_name>
+<type>Field Label</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_b97f1ed1db1d3200a34fd421cf96190d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="xMInformProperties">562f1255db1d3200a34fd421cf9619a5</category><order>200</order><property display_value="x_xma_xmatters.inform.locations" name="x_xma_xmatters.inform.locations">e26f1655db1d3200a34fd421cf961921</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-03 18:10:17</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>b97f1ed1db1d3200a34fd421cf96190d</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_xma_xmatters.inform.locations.xMInformProperties</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_properties_category_m2m_b97f1ed1db1d3200a34fd421cf96190d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-03 18:11:12</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>5f0c07610fb3320037edb97ce1050ef8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>x_xma_xmatters.inform.locations.xMInformProperties</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_action_93801289dbd53200a34fd421cf9619e3</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name/&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;true&lt;/client&gt;&lt;comments&gt;Send Inform with xMatters update&lt;/comments&gt;&lt;condition/&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;hint/&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;name&gt;Inform with xMatters&lt;/name&gt;&lt;onclick&gt;informWithXMatters()&lt;/onclick&gt;&lt;order&gt;106&lt;/order&gt;&lt;script&gt;&lt;![CDATA[var xmInform = {};
+
+function informWithXMatters() {
+	var incidentId = g_form.getUniqueValue();
+//	console.log( 'dialog: ' + g_scratchpad.appPrefix + '_xm_inform_with_xmatters' );
+	xmInform.incident = incidentId;
+	
+	var dialog = new GlideDialogWindow( 'x_xma_xmatters_xm_inform_with_xmatters' );
+	dialog.setTitle( "" );
+	dialog.setPreference( "sysparm_nostack", true );
+	dialog.setPreference( "sysparm_sysID", incidentId );
+	dialog.setPreference( "incident.number" );
+	dialog.render();
+	
+}]]&gt;&lt;/script&gt;&lt;show_insert&gt;false&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-02 22:30:22&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;93801289dbd53200a34fd421cf9619e3&lt;/sys_id&gt;&lt;sys_mod_count&gt;15&lt;/sys_mod_count&gt;&lt;sys_name&gt;Inform with xMatters&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_93801289dbd53200a34fd421cf9619e3&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-07 02:17:53&lt;/sys_updated_on&gt;&lt;table&gt;incident&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>5f0c07610fb3320037edb97ce1050ef9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>incident</table>
+<target_name>Inform with xMatters</target_name>
+<type>UI Action</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_db_object_30a1cb62dbd1b200a34fd421cf961949</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object"><sys_db_object action="INSERT_OR_UPDATE"><access>public</access><actions_access>false</actions_access><alter_access>false</alter_access><client_scripts_access>false</client_scripts_access><configuration_access>false</configuration_access><create_access>true</create_access><create_access_controls>true</create_access_controls><delete_access>false</delete_access><extension_model/><is_extendable>false</is_extendable><label>Inform with xMatters</label><live_feed_enabled>false</live_feed_enabled><name>x_xma_xmatters_inform_with_xmatters</name><number_ref display_value="XMI">575347a2dbd1b200a34fd421cf96192d</number_ref><provider_class/><read_access>true</read_access><super_class/><sys_class_name>sys_db_object</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:31</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>30a1cb62dbd1b200a34fd421cf961949</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Inform with xMatters</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_db_object_30a1cb62dbd1b200a34fd421cf961949</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:33</sys_updated_on><update_access>true</update_access><user_role display_value="itil" name="itil">282bf1fac6112285017366cb5f867469</user_role><ws_access>true</ws_access></sys_db_object></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>5f0c83ed0f73320037edb97ce1050e2d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>Inform with xMatters</target_name>
+<type>Table</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_documentation_x_xma_xmatters_inform_with_xmatters_update_type_en</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_documentation element="update_type" label="Update Type" language="en" table="x_xma_xmatters_inform_with_xmatters"><sys_documentation action="INSERT_OR_UPDATE"><element>update_type</element><help/><hint/><label>Update Type</label><language>en</language><name>x_xma_xmatters_inform_with_xmatters</name><plural>Update Types</plural><sys_class_name>sys_documentation</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:32</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>135347a2dbd1b200a34fd421cf961918</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Update Type</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_documentation_x_xma_xmatters_inform_with_xmatters_update_type_en</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:32</sys_updated_on><url/><url_target/></sys_documentation></sys_documentation></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>930c07610fb3320037edb97ce1050ef8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>Inform with xMatters.Update Type</target_name>
+<type>Field Label</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_include_624ba141dbd53200a34fd421cf96194b</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_xma_xmatters.xMattersConfigExtended&lt;/api_name&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;xMattersConfigExtended&lt;/name&gt;&lt;script&gt;&lt;![CDATA[gs.include("xMattersConfig");
+
+var xMattersConfigExtended = Class.create();
+
+// We'll extend the xMattersConfig class so that we can inherit all
+// the good stuff there. We can then reference like so:
+// 'SNAPI.hostname: ' + this.SNAPI.hostname
+xMattersConfigExtended.prototype = Object.extend( new xMattersConfig(), {
+    initialize: function() {
+		var prefix = gs.getCurrentScopeName();
+		
+		this.INFORM = {
+			ENABLED: true,
+			FORM: gs.getProperty(prefix + '.inform.endpoint'),
+			LOCATIONS: {
+				LIST: gs.getProperty(prefix + '.inform.locations'), 
+				UUID: gs.getProperty(prefix + '.inform.locations.uuid')
+			},
+			SERVICES: {
+				LIST: gs.getProperty(prefix + '.inform.services'), 
+				UUID: gs.getProperty(prefix + '.inform.services.uuid')
+			}
+		};
+    },
+
+    type: 'xMattersConfigExtended'
+});
+
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-02 20:12:44&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;624ba141dbd53200a34fd421cf96194b&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;xMattersConfigExtended&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_624ba141dbd53200a34fd421cf96194b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-06 22:24:09&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>930c07610fb3320037edb97ce1050ef9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>xMattersConfigExtended</target_name>
+<type>Script Include</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_script_2e509281dbd53200a34fd421cf961966</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_script"&gt;&lt;sys_ui_script action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;description&gt;&amp;#13;
+INFORM!&lt;/description&gt;&lt;global&gt;false&lt;/global&gt;&lt;name&gt;x_xma_xmatters.xm_app_inform_xmatters&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var informApp = angular.module('xm.inform-xm', [ 'ngTagsInput', 'ngMessages', 'pascalprecht.translate', 'xm.xmatters-service', 'xm.location-service', 'xm.glide-ajax', 'ui.bootstrap' ]); 
+ // Global configuration for ng tags input module 
+
+
+informApp.config(function(tagsInputConfigProvider) {
+	tagsInputConfigProvider.setDefaults('tagsInput', {
+		replaceSpacesWithDashes: false,
+		addFromAutocompleteOnly: true
+	}).setDefaults('autoComplete', {
+		minLength: 1
+	});
+});
+
+
+
+// Configuration for translations
+informApp.config(function ($translateProvider) {
+  $translateProvider.translations('en', {
+  	INFORM_XM: {
+  		TITLE: 'Inform with xMatters',
+  		LABEL: {
+  			UPDATE_TYPE:     'Update Type',
+  			PARENT_INCIDENT: 'Parent Incident',
+			BUSINESS_IMPACT: 'Business Impact',
+			UPDATE:          'Update',
+  			FIRST_REPORTED:  'First Reported',
+  			LOCATIONS:       'Locations',
+  			SERVICES:        'Services'
+  		},
+  		BUTTON: {
+  			SUBMIT: 'Submit',
+			CANCEL: 'Cancel'
+  		},
+  		ERROR: {
+  			REQUIRED: 'Required field',
+  			MAX_LENGTH: 'Maximum length {{max_length}} characters'
+  		},
+  		MESSAGE: {
+  			SUCCESS: 'Your request has been submitted successfully. To track the progress of this request in ServiceNow, view the Inform with xMatters record.'
+  		},
+  		OPTIONS: {
+  		}
+  	}
+  });
+  $translateProvider.preferredLanguage('en');
+});
+informApp.controller('informCtlr', 
+	function($scope, $window, $translate, $q, $filter, XMService, LocationService, GlideAjax) {
+		 // Core scope variables 
+		$scope.is_finished = false; 
+		$scope.is_invalid = false;
+		$scope.global_errors = [];
+
+		 // form model scope variables and default values 
+		$scope.business_impact = '';
+		$scope.update          = '';
+		$scope.first_reported  = '';
+	
+	
+		 // result scope variable 
+		$scope.engage_url = '';
+
+		 // behind the scenes scope variables used for options/state 
+		$scope.xm_search_state           = XMService.searchState;
+		$scope.update_type_options = [
+			{ "label": "-- None --", "value": null },
+			{ "label": "Initial",    "value": "Initial" },
+			{ "label": "Bridge",     "value": "Bridge" },
+			{ "label": "Update",     "value": "Update" },
+			{ "label": "Resolved",   "value": "Resolved" }
+
+		];
+	
+		$scope.locations = [];
+		$scope.services  = [];
+		$scope.allLocations = [];
+		$scope.allServices = [];
+
+	
+		// Set the incident id scope variable based on search parameters in the url 
+		$scope.incident_id     = LocationService.searchParams.incident_id;
+	
+		if( typeof $scope.incident_id === 'undefined' || $scope.incident_id === null || $scope.incident_id === '' ) {
+			console.log( 'No incident identifier was defined' );
+			$scope.global_errors.push( 'Missing "incident_id" parameter: A valid ServiceNow Incident system id must be set to continue' );
+		}
+
+		var retrieveIncident = new GlideAjax( 'xMattersAjaxExtended' );
+		retrieveIncident.addParam( 'sysparm_name', 'getIncident' );
+		retrieveIncident.addParam( 'sysparm_sys_id', $scope.incident_id );
+		retrieveIncident.send().then( function( resp ) {
+			if( resp.success ) {
+				$scope.incident = resp.data;
+
+			} else {
+				console.log( 'Error getting Incident: ' + JSON.stringify( resp ) );
+			}
+		});
+
+	
+		// Options for the date picker
+	    // See here for details: https://angular-ui.github.io/bootstrap/#!#datepicker
+		$scope.dateOptions = {
+			//maxDate: new Date(),  // Set min and max selectable dates
+			//minDate: new Date()
+		};
+	
+		$scope.first_reported = new Date(); 
+	
+		$scope.openCalendarPopup = function() {
+			$scope.calendarPopup.opened = true;
+		};
+	
+		$scope.calendarPopup = {
+			opened: false
+		};
+	
+	
+		var retrieveLocations = new GlideAjax( 'xMattersAjaxExtended' );
+		retrieveLocations.addParam( 'sysparm_name', 'getLocations' );
+		retrieveLocations.send().then( function( resp ){
+			if( resp.success ) {
+				var locationsTemp = resp.data.split( ';' );
+				for( var i = 0; i &lt; locationsTemp.length; i++ ) {
+					if( locationsTemp[i].trim().length &gt; 0 ) {
+						$scope.allLocations.push( {"text": locationsTemp[i] } );
+					}
+				}
+			} else {
+				console.log( 'Error getting Locations: ' + resp );
+			}
+		} );
+
+		//$scope.allLocations = OptionsProviderExtended.locations;
+	
+		var retrieveServices = new GlideAjax( 'xMattersAjaxExtended' );
+		retrieveServices.addParam( 'sysparm_name', 'getServices' );
+		retrieveServices.send().then( function( resp ){
+			if( resp.success ) {
+				var servicesTemp = resp.data.split( ';' );
+				for( var i = 0; i &lt; servicesTemp.length; i++ ) {
+					if( servicesTemp[i].trim().length &gt; 0 ) {
+						$scope.allServices.push( {"text": servicesTemp[i] } );
+					}
+				}
+			} else {
+				console.log( 'Error getting Services: ' + resp );
+			}
+		} );
+	
+	
+		$scope.getLocations = function( query ) {
+				var deferred = $q.defer();
+				deferred.resolve( $filter('filter')($scope.allLocations, query) );
+				return deferred.promise;
+		};
+	
+		$scope.getServices = function( query ) {
+			
+			    var deferred = $q.defer();
+				deferred.resolve( $filter('filter')($scope.allServices, query) );
+				return deferred.promise;
+					 
+		};
+	
+	
+		/**
+		 * Submits the engageXMForm form, and if valid, tries to create a new Engage with xMatters record via
+		 * the xMattersAjaxEngage client callable script include.
+		 */
+		$scope.submit = function() {
+			
+
+			$scope.informXMForm.$setSubmitted( true );
+			if( $scope.informXMForm.$invalid ) {
+				console.log( 'The form will not be submitted in an invalid state' );
+				console.log( $scope.informXMForm );
+			} else {
+				var formData = {
+					"business_impact": $scope.business_impact,
+					"first_reported":  $scope.first_reported,
+					"locations":       $scope.locations.map( function( item ){ return item.text; }).join( ';' ),
+					"services":        $scope.services.map(  function( item ){ return item.text; }).join( ';' ),
+					"update":          $scope.update,
+					"update_type":     $scope.update_type,
+					"parent_incident": $scope.incident_id
+				};
+				
+				//  console.log( 'formData: ' + JSON.stringify( formData ) );
+				
+				var ga = new GlideAjax( 'xMattersAjaxExtended' );
+				ga.addParam( 'sysparm_name', 'submitInformWithXMatters' );
+				ga.addParam( 'form_data', JSON.stringify( formData ) );
+				ga.send().then( function( resp ) {
+					if( resp.success ) {
+						$scope.is_finished = true;
+						//$scope.engage_url = '/nav_to.do?uri=x_xma_xmatters_engage_with_xmatters.do?sys_id=' + resp.data.sys_id;
+						//var gdw = GlideDialogWindow.get();
+						//console.log( 'GDW: ' + gdw );
+						//gdw.destroy();
+						$translate('INFORM_XM.MESSAGE.SUCCESS').then(function(successMsg){
+                            closeDialog(successMsg);
+                        });
+						
+						
+						
+					} else {
+						console.log( resp );
+					}
+				} ).catch( function( resp ){
+					console.log( resp );
+				} );
+			}
+
+
+		};
+
+	
+	        
+        var closeDialog = function(optionalMessage) {
+            var data = {
+                type: "DIALOG_CLOSE"
+            };
+            if(optionalMessage) {
+                data.message = optionalMessage;
+            }
+            $window.parent.postMessage(data, window.location.origin);
+        };
+    
+        $scope.cancel = function() {
+            closeDialog();
+        };
+
+});
+
+
+
+
+
+]]&gt;&lt;/script&gt;&lt;script_name&gt;xm_app_inform_xmatters&lt;/script_name&gt;&lt;sys_class_name&gt;sys_ui_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-02 22:26:24&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;2e509281dbd53200a34fd421cf961966&lt;/sys_id&gt;&lt;sys_mod_count&gt;97&lt;/sys_mod_count&gt;&lt;sys_name&gt;x_xma_xmatters.xm_app_inform_xmatters&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_script_2e509281dbd53200a34fd421cf961966&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-07-06 22:29:42&lt;/sys_updated_on&gt;&lt;use_scoped_format&gt;false&lt;/use_scoped_format&gt;&lt;/sys_ui_script&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>930c07610fb3320037edb97ce1050efa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>x_xma_xmatters.xm_app_inform_xmatters</target_name>
+<type>UI Script</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_x_xma_xmatters_inform_with_xmatters_number</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update&gt;&lt;sys_dictionary action="INSERT_OR_UPDATE" element="number" table="x_xma_xmatters_inform_with_xmatters"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;attributes/&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Number&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value&gt;javascript:global.getNextObjNumberPadded();&lt;/default_value&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;number&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;name&gt;x_xma_xmatters_inform_with_xmatters&lt;/name&gt;&lt;next_element/&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-07 17:59:33&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;575347a2dbd1b200a34fd421cf96192e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Number&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_dictionary_x_xma_xmatters_inform_with_xmatters_number&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-07 17:59:33&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_dictionary&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>970c07610fb3320037edb97ce1050ef7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>Inform with xMatters.Number</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_38dfd655db1d3200a34fd421cf961930</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>UUID for Affected Services property in Inform with xMatters form</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>x_xma_xmatters.inform.services.uuid</name><read_roles/><suffix>inform.services.uuid</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-03 18:12:04</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>38dfd655db1d3200a34fd421cf961930</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_xma_xmatters.inform.services.uuid</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_properties_38dfd655db1d3200a34fd421cf961930</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-03 18:12:04</sys_updated_on><type>string</type><value/><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=38dfd655db1d3200a34fd421cf961930"/></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>970c07610fb3320037edb97ce1050ef8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>x_xma_xmatters.inform.services.uuid</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_4b5307a2dbd1b200a34fd421cf9619f7</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><condition/><description>Default access control on x_xma_xmatters_inform_with_xmatters</description><name>x_xma_xmatters_inform_with_xmatters</name><operation display_value="delete">delete</operation><script/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:32</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>4b5307a2dbd1b200a34fd421cf9619f7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_xma_xmatters_inform_with_xmatters</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_security_acl_4b5307a2dbd1b200a34fd421cf9619f7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:32</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>970c07610fb3320037edb97ce1050ef9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>x_xma_xmatters_inform_with_xmatters</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_x_xma_xmatters_inform_with_xmatters_update_type</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update&gt;&lt;sys_dictionary action="INSERT_OR_UPDATE" element="update_type" table="x_xma_xmatters_inform_with_xmatters"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;attributes/&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Update Type&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;update_type&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;name&gt;x_xma_xmatters_inform_with_xmatters&lt;/name&gt;&lt;next_element/&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-07 17:59:30&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;29a14fa6db91b200a34fd421cf9619b6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Update Type&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_dictionary_x_xma_xmatters_inform_with_xmatters_update_type&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-07 17:59:30&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_dictionary&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>9b0c07610fb3320037edb97ce1050ef7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>x_xma_xmatters_inform_with_xmatters.update_type</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_1ecf1655db1d3200a34fd421cf961925</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="xMInformProperties">562f1255db1d3200a34fd421cf9619a5</category><order>400</order><property display_value="x_xma_xmatters.inform.services" name="x_xma_xmatters.inform.services">a3bf9655db1d3200a34fd421cf961964</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-03 18:11:42</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>1ecf1655db1d3200a34fd421cf961925</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_xma_xmatters.inform.services.xMInformProperties</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_properties_category_m2m_1ecf1655db1d3200a34fd421cf961925</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-03 18:12:20</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>9b0c07610fb3320037edb97ce1050ef8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>x_xma_xmatters.inform.services.xMInformProperties</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_4f5307a2dbd1b200a34fd421cf9619f6</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:32</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>4f5307a2dbd1b200a34fd421cf9619f6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_xma_xmatters_inform_with_xmatters.itil</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_security_acl display_value="x_xma_xmatters_inform_with_xmatters">035307a2dbd1b200a34fd421cf9619f6</sys_security_acl><sys_update_name>sys_security_acl_role_4f5307a2dbd1b200a34fd421cf9619f6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:32</sys_updated_on><sys_user_role display_value="itil" name="itil">282bf1fac6112285017366cb5f867469</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>9b0c07610fb3320037edb97ce1050ef9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>x_xma_xmatters_inform_with_xmatters.itil</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_documentation_x_xma_xmatters_inform_with_xmatters_number_en</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_documentation element="number" label="Number" language="en" table="x_xma_xmatters_inform_with_xmatters"><sys_documentation action="INSERT_OR_UPDATE"><element>number</element><help/><hint/><label>Number</label><language>en</language><name>x_xma_xmatters_inform_with_xmatters</name><plural>Numbers</plural><sys_class_name>sys_documentation</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:33</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>ab5347a2dbd1b200a34fd421cf96192f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Number</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_documentation_x_xma_xmatters_inform_with_xmatters_number_en</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:33</sys_updated_on><url/><url_target/></sys_documentation></sys_documentation></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>9f0c07610fb3320037edb97ce1050ef7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>Inform with xMatters.Number</target_name>
+<type>Field Label</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_ff5f1615db1d3200a34fd421cf961924</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="xMInformProperties">562f1255db1d3200a34fd421cf9619a5</category><order>100</order><property display_value="x_xma_xmatters.inform.endpoint" name="x_xma_xmatters.inform.endpoint">184f9255db1d3200a34fd421cf9619fe</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-03 18:09:53</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>ff5f1615db1d3200a34fd421cf961924</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_xma_xmatters.inform.endpoint.xMInformProperties</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_properties_category_m2m_ff5f1615db1d3200a34fd421cf961924</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-03 18:11:12</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>9f0c07610fb3320037edb97ce1050ef8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>x_xma_xmatters.inform.endpoint.xMInformProperties</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_application_8f5307a2dbd1b200a34fd421cf9619f1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_application"><sys_ui_application action="INSERT_OR_UPDATE"><active>true</active><hint/><name>Integration - xMatters</name><order/><roles>x_xma_xmatters.xmatters_admin</roles><sys_class_name>sys_ui_application</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:31</sys_created_on><sys_customer_update>true</sys_customer_update><sys_domain>global</sys_domain><sys_domain_path/><sys_id>8f5307a2dbd1b200a34fd421cf9619f1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Integration - xMatters</sys_name><sys_overrides/><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_ui_application_8f5307a2dbd1b200a34fd421cf9619f1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:31</sys_updated_on></sys_ui_application></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>9f0c07610fb3320037edb97ce1050ef9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>Integration - xMatters</target_name>
+<type>Application Menu</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_x_xma_xmatters_inform_with_xmatters_business_impact</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update&gt;&lt;sys_dictionary action="INSERT_OR_UPDATE" element="business_impact" table="x_xma_xmatters_inform_with_xmatters"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;attributes/&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Business Impact&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;business_impact&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;2000&lt;/max_length&gt;&lt;name&gt;x_xma_xmatters_inform_with_xmatters&lt;/name&gt;&lt;next_element/&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-07 17:59:31&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;82c283a2dbd1b200a34fd421cf961942&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Business Impact&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_dictionary_x_xma_xmatters_inform_with_xmatters_business_impact&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-07 17:59:31&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_dictionary&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>9f0c83ed0f73320037edb97ce1050e2d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>x_xma_xmatters_inform_with_xmatters.business_impact</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_documentation_x_xma_xmatters_inform_with_xmatters__en</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_documentation element="" label="Inform with xMatters" language="en" table="x_xma_xmatters_inform_with_xmatters"><sys_documentation action="INSERT_OR_UPDATE"><element/><help/><hint/><label>Inform with xMatters</label><language>en</language><name>x_xma_xmatters_inform_with_xmatters</name><plural>Inform with xMatters</plural><sys_class_name>sys_documentation</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:32</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>9f5347a2dbd1b200a34fd421cf961913</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Inform with xMatters</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_documentation_x_xma_xmatters_inform_with_xmatters__en</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:32</sys_updated_on><url/><url_target/></sys_documentation></sys_documentation></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>d30c07610fb3320037edb97ce1050ef8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>Inform with xMatters</target_name>
+<type>Field Label</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_include_9033b141dbd53200a34fd421cf961934</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_xma_xmatters.xMattersEventExtended&lt;/api_name&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;xMattersEventExtended&lt;/name&gt;&lt;script&gt;&lt;![CDATA[gs.include( 'xMattersEvent' );
+
+var xMattersEventExtended = Class.create();
+xMattersEventExtended.prototype = Object.extend( new xMattersEvent(), {
+    initialize: function( config, dataHelper ) {
+		
+		// The parent xMatterEvent initialize gets called
+		// before this child one, so we are confident in 
+		// overwritting any values set in there. 
+		if( config ) 
+			this.config = config;
+		
+		if( dataHelper ) 
+			this.dataHelper = dataHelper;
+		
+		this.priority = 'medium';
+		
+		this.log = new xMattersLogger( this.config.LOGLEVEL, 'xMattersEventExtended' );
+    },
+
+	// Methods that interact with xMatters syste via the Data Helper
+	/**
+	 * Sends the event -- will attempt a set number of times based on configured
+	 * maximum attempts.
+	 * @return {string} The event id or requestId of the request to xMatters
+	 */
+	send: function() {
+		
+		this.log.info( 'xMattersEventExtended: Starting send...' );
+		var attempts = 0;
+		var isSuccess = false;
+		var message = '';
+		var id = null;
+		
+		while( !isSuccess &amp;&amp; attempts &lt; this.config.EVENTS.MAX_ATTEMPTS ) {
+			attempts += 1;
+			try {
+				var resp = this.dataHelper.sendRequest( {
+					"method": "POST",
+					"endpoint": this.webserviceURL,
+					"path": this.webserviceURL, //added for logging
+					"headers": {
+						"Content-Type": "application/json"
+					},
+					"body": this.getEventBody()
+				} );
+				this.response = resp;
+				if( resp.status &gt;= 200 &amp;&amp; resp.status &lt; 300 ) {
+					isSuccess = true;
+					body = this.json.decode( resp.body );
+					
+					if( body.id ) {
+						id = body.id;
+					}
+					else if ( body.requestId )
+						id = body.requestId;
+					
+					message = "[xMatters] - created xMatters event with eventID " + id + " " + this.getTargetDescription();
+				} else {
+					if( this.recipients.length &lt;= 0 &amp;&amp; resp.status === 400 ) {
+						if( this.isResponseMissingRecipients( resp ) ) {
+							// there was no default recipient.
+							this.log.error( "[xMatters] - failed to create event " + this.getTargetDescription() + 
+								" | status: " + resp.status + " | body: " + resp.body );
+							message = "[xMatters] - creation of xMatters event FAILED " + this.getTargetDescription() + 
+								" after " + attempts + " attempts, no recipients were specified. To avoid this error, set default recipients" +
+								" within xmatters. please refer to logs for more details";
+							break;
+						}
+					}
+					// if didn't break, catch errors through regular error handling
+					this.log.error( "[xMatters] - failed to create event " + this.getTargetDescription() + 
+						" | status: " + resp.status + " | body: " + resp.body );
+					
+				}
+			} catch( e ) {
+				this.log.error( "[xMatters] - failed to create event " + this.getTargetDescription() + 
+					" | error: " + String( e ) );
+			}
+		}
+		if( !isSuccess &amp;&amp; message === '' ) {
+			message = "[xMatters] - creation of xMatters event FAILED " + this.getTargetDescription() + 
+				" after " + attempts + " attempts, please refer to logs for more details";
+		}
+		this.log.info( message );
+		this.xMattersId = id;
+		return id;
+	},
+
+
+    type: 'xMattersEventExtended'
+});
+
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-02 20:18:57&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;9033b141dbd53200a34fd421cf961934&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_name&gt;xMattersEventExtended&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_9033b141dbd53200a34fd421cf961934&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-07 18:58:17&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>d30c07610fb3320037edb97ce1050ef9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>xMattersEventExtended</target_name>
+<type>Script Include</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>DELETE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_script_447c97dddb5d3200a34fd421cf961902</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_script"&gt;&lt;sys_ui_script action="DELETE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;description/&gt;&lt;global&gt;false&lt;/global&gt;&lt;name&gt;x_xma_xmatters.xm_mod_options_provider_e&lt;/name&gt;&lt;script&gt;&lt;![CDATA[angular.module('xm.options-provider-extended', [ 'xm.glide-ajax' ])
+    .service('OptionsProviderExtended', function ( GlideAjax ) {
+        var options = {
+            locations: [],
+            services: []
+        };
+
+
+		var retrieveLocations = new GlideAjax( 'xMattersAjaxExtended' );
+		retrieveLocations.addParam( 'sysparm_name', 'getLocations' );
+		retrieveLocations.send().then( function( resp ){
+			if( resp.success ) {
+				var locationsTemp = resp.data.split( ';' );
+				for( var i = 0; i &lt; locationsTemp.length; i++ ) {
+					if( locationsTemp[i].trim().length &gt; 0 ) {
+						options.locations.push( locationsTemp[i].trim() );
+					}
+				}
+			} else {
+				console.log( 'Error getting Locations: ' + resp );
+			}
+		} );
+			
+
+		var retrieveServices = new GlideAjax( 'xMattersAjaxExtended' );
+		retrieveServices.addParam( 'sysparm_name', 'getServices' );
+		retrieveServices.send().then( function( resp ){
+			if( resp.success ) {
+				var servicesTemp = resp.data.split( ';' );
+				for( var i = 0; i &lt; servicesTemp.length; i++ ) {
+					if( servicesTemp[i].trim().length &gt; 0 ) {
+						options.services.push( servicesTemp[i].trim() );
+					}
+				}
+			} else {
+				console.log( 'Error getting Services: ' + resp );
+			}
+		} );
+
+		return options;
+	});]]&gt;&lt;/script&gt;&lt;script_name&gt;xm_mod_options_provider_extended&lt;/script_name&gt;&lt;sys_class_name&gt;sys_ui_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-03 22:48:57&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;447c97dddb5d3200a34fd421cf961902&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;x_xma_xmatters.xm_mod_options_provider_e&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_script_447c97dddb5d3200a34fd421cf961902&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-06 06:01:26&lt;/sys_updated_on&gt;&lt;use_scoped_format&gt;false&lt;/use_scoped_format&gt;&lt;/sys_ui_script&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>d30c07610fb3320037edb97ce1050efa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>x_xma_xmatters.xm_mod_options_provider_e</target_name>
+<type>UI Script</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_x_xma_xmatters_inform_with_xmatters_parent_incident</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update&gt;&lt;sys_dictionary action="INSERT_OR_UPDATE" element="parent_incident" table="x_xma_xmatters_inform_with_xmatters"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;attributes/&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Parent Incident&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;parent_incident&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;name&gt;x_xma_xmatters_inform_with_xmatters&lt;/name&gt;&lt;next_element/&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference display_value="Incident" name="incident"&gt;incident&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-07 17:59:30&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;564283aadb91b200a34fd421cf961920&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Parent Incident&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_dictionary_x_xma_xmatters_inform_with_xmatters_parent_incident&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-07 17:59:30&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_dictionary&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>d70c07610fb3320037edb97ce1050ef7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>x_xma_xmatters_inform_with_xmatters.parent_incident</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_408f1655db1d3200a34fd421cf9619f8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>UUID for Affected Locations property in Inform with xMatters form</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>x_xma_xmatters.inform.locations.uuid</name><read_roles/><suffix>inform.locations.uuid</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-03 18:10:44</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>408f1655db1d3200a34fd421cf9619f8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_xma_xmatters.inform.locations.uuid</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_properties_408f1655db1d3200a34fd421cf9619f8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-03 18:10:44</sys_updated_on><type>string</type><value/><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=408f1655db1d3200a34fd421cf9619f8"/></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>d70c07610fb3320037edb97ce1050ef8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>x_xma_xmatters.inform.locations.uuid</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_8f5307a2dbd1b200a34fd421cf9619f2</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><condition/><description>Default access control on x_xma_xmatters_inform_with_xmatters</description><name>x_xma_xmatters_inform_with_xmatters</name><operation display_value="create">create</operation><script/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:31</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>8f5307a2dbd1b200a34fd421cf9619f2</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_xma_xmatters_inform_with_xmatters</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_security_acl_8f5307a2dbd1b200a34fd421cf9619f2</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:31</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>d70c07610fb3320037edb97ce1050ef9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>x_xma_xmatters_inform_with_xmatters</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_documentation_x_xma_xmatters_inform_with_xmatters_business_impact_en</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_documentation element="business_impact" label="Business Impact" language="en" table="x_xma_xmatters_inform_with_xmatters"><sys_documentation action="INSERT_OR_UPDATE"><element>business_impact</element><help/><hint/><label>Business Impact</label><language>en</language><name>x_xma_xmatters_inform_with_xmatters</name><plural>Business Impacts</plural><sys_class_name>sys_documentation</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:32</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>9b5347a2dbd1b200a34fd421cf961914</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Business Impact</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_documentation_x_xma_xmatters_inform_with_xmatters_business_impact_en</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:32</sys_updated_on><url/><url_target/></sys_documentation></sys_documentation></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>db0c07610fb3320037edb97ce1050ef7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>Inform with xMatters.Business Impact</target_name>
+<type>Field Label</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_609f5655db1d3200a34fd421cf96193c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="xMInformProperties">562f1255db1d3200a34fd421cf9619a5</category><order>300</order><property display_value="x_xma_xmatters.inform.locations.uuid" name="x_xma_xmatters.inform.locations.uuid">408f1655db1d3200a34fd421cf9619f8</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-03 18:10:45</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>609f5655db1d3200a34fd421cf96193c</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_xma_xmatters.inform.locations.uuid.xMInformProperties</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_properties_category_m2m_609f5655db1d3200a34fd421cf96193c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-03 18:11:12</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>db0c07610fb3320037edb97ce1050ef8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>x_xma_xmatters.inform.locations.uuid.xMInformProperties</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_875307a2dbd1b200a34fd421cf9619f8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:32</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>875307a2dbd1b200a34fd421cf9619f8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_xma_xmatters_inform_with_xmatters.itil</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_security_acl display_value="x_xma_xmatters_inform_with_xmatters">4b5307a2dbd1b200a34fd421cf9619f7</sys_security_acl><sys_update_name>sys_security_acl_role_875307a2dbd1b200a34fd421cf9619f8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:32</sys_updated_on><sys_user_role display_value="itil" name="itil">282bf1fac6112285017366cb5f867469</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>db0c07610fb3320037edb97ce1050ef9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>x_xma_xmatters_inform_with_xmatters.itil</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_app_module_71d63ed2db9d7200a34fd421cf96197f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Integration - xMatters">1b9f490f7b02f1008e0b707d784d4d81</application><assessment/><content_page/><device_type/><filter/><hint/><homepage/><image/><link_type>DIRECT</link_type><map_page/><mobile_title>Inform with xMatters Config</mobile_title><mobile_view_name>Mobile</mobile_view_name><name/><order>111</order><override_menu_roles>false</override_menu_roles><query>system_properties_ui.do?sysparm_title=xMatters Inform Config&amp;sysparm_category=xMInformProperties</query><report/><roles>x_xma_xmatters.xmatters_admin</roles><survey/><survey_overwrite>true</survey_overwrite><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-06 22:29:51</sys_created_on><sys_customer_update>true</sys_customer_update><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>71d63ed2db9d7200a34fd421cf96197f</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Inform Configuration</sys_name><sys_overrides/><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_app_module_71d63ed2db9d7200a34fd421cf96197f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-06 22:30:57</sys_updated_on><timeline_page/><title>Inform Configuration</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>db0c83ed0f73320037edb97ce1050e2d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>Inform Configuration</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_documentation_x_xma_xmatters_inform_with_xmatters_parent_incident_en</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_documentation element="parent_incident" label="Parent Incident" language="en" table="x_xma_xmatters_inform_with_xmatters"><sys_documentation action="INSERT_OR_UPDATE"><element>parent_incident</element><help/><hint/><label>Parent Incident</label><language>en</language><name>x_xma_xmatters_inform_with_xmatters</name><plural>Parent Incidents</plural><sys_class_name>sys_documentation</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:32</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>575347a2dbd1b200a34fd421cf961916</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Parent Incident</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_documentation_x_xma_xmatters_inform_with_xmatters_parent_incident_en</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:32</sys_updated_on><url/><url_target/></sys_documentation></sys_documentation></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>df0c07610fb3320037edb97ce1050ef7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>Inform with xMatters.Parent Incident</target_name>
+<type>Field Label</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_e26f1655db1d3200a34fd421cf961921</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Semicolon separated list of available locations</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>x_xma_xmatters.inform.locations</name><read_roles/><suffix>inform.locations</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-03 18:10:16</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>e26f1655db1d3200a34fd421cf961921</sys_id><sys_mod_count>6</sys_mod_count><sys_name>x_xma_xmatters.inform.locations</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_properties_e26f1655db1d3200a34fd421cf961921</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-08 18:48:22</sys_updated_on><type>string</type><value>Atlanta;Boston;Charlotte;Chattanooga;Dallas;Los Angeles;Philadelphia;New York;San Francisco;Seattle;Washington</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=e26f1655db1d3200a34fd421cf961921"/></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>df0c07610fb3320037edb97ce1050ef8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table/>
+<target_name>x_xma_xmatters.inform.locations</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_module_875307a2dbd1b200a34fd421cf9619f2</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Integration - xMatters">8f5307a2dbd1b200a34fd421cf9619f1</application><filter/><name>Inform with xMatters</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>itil</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-03-07 17:59:31</sys_created_on><sys_customer_update>true</sys_customer_update><sys_domain>global</sys_domain><sys_domain_path/><sys_id>875307a2dbd1b200a34fd421cf9619f2</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Inform with xMatters</sys_name><sys_package display_value="xMatters" source="x_xma_xmatters">5950d7444f2231000e9fa88ca310c78c</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</sys_scope><sys_update_name>sys_ui_module_875307a2dbd1b200a34fd421cf9619f2</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-03-07 17:59:31</sys_updated_on><table>x_xma_xmatters_inform_with_xmatters</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>df0c07610fb3320037edb97ce1050ef9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>Inform with xMatters</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="xMatters">5950d7444f2231000e9fa88ca310c78c</application>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_x_xma_xmatters_inform_with_xmatters_first_reported</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update&gt;&lt;sys_dictionary action="INSERT_OR_UPDATE" element="first_reported" table="x_xma_xmatters_inform_with_xmatters"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;attributes/&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;First Reported&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;first_reported&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;internal_type display_value=""&gt;glide_date_time&lt;/internal_type&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;name&gt;x_xma_xmatters_inform_with_xmatters&lt;/name&gt;&lt;next_element/&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-07 17:59:30&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;ba720f62dbd1b200a34fd421cf9619e5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;First Reported&lt;/sys_name&gt;&lt;sys_package display_value="xMatters" source="x_xma_xmatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="xMatters"&gt;5950d7444f2231000e9fa88ca310c78c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_dictionary_x_xma_xmatters_inform_with_xmatters_first_reported&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-07 17:59:30&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_dictionary&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Inform with xMatters">5b0c83ed0f73320037edb97ce1050e2d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-07-06 22:40:32</sys_created_on>
+<sys_id>df0c83ed0f73320037edb97ce1050e2d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-07-06 22:40:32</sys_updated_on>
+<table>x_xma_xmatters_inform_with_xmatters</table>
+<target_name>x_xma_xmatters_inform_with_xmatters.first_reported</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
