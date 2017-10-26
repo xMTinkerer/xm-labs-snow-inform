@@ -16,7 +16,7 @@ The [xMatters integration for ServiceNow](https://store.servicenow.com/sn_appsto
 
 # Files
 * [ServiceNow36withInform.zip](ServiceNow36withInform.zip) - Communications Plan file. This contains all of the out of box ServiceNow forms, in addition to the Inform with xMatters form. 
-* [Inform with xMatters - for SN 3.7.1.xml](https://github.com/xmatters/xm-labs-snow-inform/raw/master/Inform%20with%20xMatters%20-%20for%20SN%203.7.1.xml) - Update set containing the ServiceNow artifacts for enabling the Inform with xMatters functionality. **Note**: Right click > Save As.. the link to download the file as an XML file. 
+* [Inform with xMatters - for SN 3.7.1.xml](https://raw.githubusercontent.com/xmatters/xm-labs-snow-inform/master/Inform%20with%20xMatters%20-%20for%20SN%203.7.1.xml) - Update set containing the ServiceNow artifacts for enabling the Inform with xMatters functionality. **Note**: Right click > Save As.. the link to download the file as an XML file. 
 
 
 # Installation
