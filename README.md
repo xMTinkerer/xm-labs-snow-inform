@@ -8,6 +8,15 @@ The [xMatters integration for ServiceNow](https://store.servicenow.com/sn_appsto
   <img src="images/inform_page.png" alt="Inform with xMatters" height="400">
 </kbd>
 
+---------
+
+<kbd>
+  <img src="https://github.com/xmatters/xMatters-Labs/raw/master/media/disclaimer.png">
+</kbd>
+
+---------
+
+
 
 # Pre-Requisites
 * ServiceNow Fuji or Istanbul
