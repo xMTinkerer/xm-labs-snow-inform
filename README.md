@@ -31,7 +31,7 @@ The [xMatters integration for ServiceNow](https://store.servicenow.com/sn_appsto
 # Installation
 Login to ServiceNow and navigate to Retrieved Update Sets. Click the `Import Update Set from XML` link at the bottom and point to the [Inform with xMatters - for SN 3.7.1.xml](https://raw.githubusercontent.com/xmatters/xm-labs-snow-inform/master/Inform%20with%20xMatters%20-%20for%20SN%203.7.1.xml). Preview the update set and commit. This is all net new records so there should not be any files overwritten. 
 
-Login to xMatters and import the [ServiceNowInformwithxMatters.zip](ServiceNowInformwithxMatters.zip) file. This contains a new comm plan called "Servicenow 3.6 with Inform" and contains the Integration Builder script, form and properties for sending these notifications. If needed, the components can be copied to an existing comm plan manually. 
+Login to xMatters and import the [ServiceNowInformwithxMatters.zip](ServiceNowInformwithxMatters.zip) file. This contains a new comm plan called `ServiceNow - Inform with xMatters` and contains the Integration Builder script, form and properties for sending these notifications. 
 
 ## Configure ServiceNow
 Login to ServiceNow and expand the "Integration - xMatters" menu item. In the Configuration section, there is a new entry for "Inform Configuration":
