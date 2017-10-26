@@ -29,7 +29,7 @@ The [xMatters integration for ServiceNow](https://store.servicenow.com/sn_appsto
 
 
 # Installation
-Login to ServiceNow and navigate to Retrieved Update Sets. Point to the [Inform with xMatters - for SN 3.7.1.xml](https://raw.githubusercontent.com/xmatters/xm-labs-snow-inform/master/Inform%20with%20xMatters%20-%20for%20SN%203.7.1.xml). Preview the update set and commit. This is all net new records so there should not be any files overwritten. 
+Login to ServiceNow and navigate to Retrieved Update Sets. Click the `Import Update Set from XML` link at the bottom and point to the [Inform with xMatters - for SN 3.7.1.xml](https://raw.githubusercontent.com/xmatters/xm-labs-snow-inform/master/Inform%20with%20xMatters%20-%20for%20SN%203.7.1.xml). Preview the update set and commit. This is all net new records so there should not be any files overwritten. 
 
 Login to xMatters and import the [ServiceNowInformwithxMatters.zip](ServiceNowInformwithxMatters.zip) file. This contains a new comm plan called "Servicenow 3.6 with Inform" and contains the Integration Builder script, form and properties for sending these notifications. If needed, the components can be copied to an existing comm plan manually. 
 
@@ -42,13 +42,13 @@ Login to ServiceNow and expand the "Integration - xMatters" menu item. In the Co
 
 | Item | Description |
 | ----- | ----- |
-| Inform with xMatters Form Endpoint | The Integration Builder endpoint for the "Inform with xMatters" inbound integration url |
+| Inform with xMatters Form Endpoint | The **Integration Builder endpoint** for the "Inform with xMatters" inbound integration url |
 | Available Locations | Semicolon separated list of locations to make available for selection |
-| UUID for affected locations | er,... not used |
+| UUID for affected locations | Not used |
 | Available Services | Semicolon separated list of services to make available for selection |
-| UUID for affected services | also not used |
+| UUID for affected services | Not used |
 
-The Available Services and Available Locations values in the config page above will need to match what is available in the "affected_services" and "affected_locations" properties in the comm plan. Here:
+The Available Services and Available Locations values in the config page above will need to match what is available in the "affected_services" and "affected_locations" properties in the `ServiceNow - Inform with xMatters` comm plan in xMatters. Here:
 
 <kbd>
   <img src="images/affected_loc.png" alt="Affected Locations property in xMatters" >
