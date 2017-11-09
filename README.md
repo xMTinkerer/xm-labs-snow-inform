@@ -19,7 +19,7 @@ The [xMatters integration for ServiceNow](https://store.servicenow.com/sn_appsto
 
 
 # Pre-Requisites
-* ServiceNow Fuji or Istanbul
+* ServiceNow Helsinki, Istanbul or Jakarta
 * ServiceNow integration to [xMatters v3.7.11+](https://store.servicenow.com/sn_appstore_store.do#!/store/application/5950d7444f2231000e9fa88ca310c78c/3.7.12)
 * xMatters account - If you don't have one, [get one](https://www.xmatters.com)!
 
